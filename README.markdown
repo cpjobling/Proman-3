@@ -8,7 +8,7 @@ The source code for the Proman project is licensed by an Apache 2 licence and ho
 
 ## Getting Started
 
-To download a copy of the latest (HEAD) version go to [github.com/cpjobling/Proman/tree/master](http://github.com/cpjobling/Proman-3) and follow the instructions.
+To download a copy of the latest (HEAD) version go to [github.com/cpjobling/Proman-3](http://github.com/cpjobling/Proman-3) and follow the instructions.
 
 More detailed documentation will follow.
 
