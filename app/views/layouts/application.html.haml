@@ -8,6 +8,40 @@
     = stylesheet_link_tag 'compiled/print.css', :media => 'print'
     /[if IE]
       = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
+    = yield :head
   %body
-    %h1 Welcome to Proman
-    = yield
+	  #container
+	    #header
+	      %h1= link_to 'Proman3', root_path
+	      - if current_user
+	        #user-navigation
+	          %ul
+	            %li= link_to t(:profile), account_path
+	            %li= link_to t(:logout), logout_path
+	          .clear
+	      #main-navigation
+	        %ul
+	          %li.active= link_to t(:home), root_path
+	          - if !current_user
+	            %li= link_to t(:login), login_path
+	            %li= link_to t(:register), new_account_path
+	        .clear
+	    #wrapper
+	      #main
+	        .block
+	          .flash
+	            - flash.each do |name, mesg|
+	              %div{ :class => "message #{name}" }
+	                %p&= mesg
+	          .content
+	            = yield
+	        #footer
+	          .block
+	            %p= t(:copyright)
+	      #sidebar
+	        .block
+	          %h3= yield :title_sidebar
+	          .content
+	            %p= yield :sidebar
+	      .clear
+	    = yield

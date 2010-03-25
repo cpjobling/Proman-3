@@ -1,0 +1,13 @@
+- title t '.title'
+
+#sessions-new.block
+  %h2= yield :title
+  .content.form
+    - semantic_form_for @session, :url => session_path do |f|
+      - f.inputs do
+        = f.input :login, :required => false
+        = f.input :password, :required => false
+        = f.input :remember_me, :required => false, :as => :boolean, :class => 'checkbox'
+      - f.buttons do
+        = f.commit_button t('.submit')
+        = link_to t('.lost_password'), new_password_reset_path
