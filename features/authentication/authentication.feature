@@ -8,12 +8,10 @@ Feature: Authentication
     When I go to the login page
     Then I should see a login form
 
-  @wip
   Scenario: Redirect to account page when user is logged in
     Given "hector" a logged in user
     When I go to the login page
     Then I should be logged in
-
 
   Scenario: Allow login of a user with valid credentials
     Given "hector" a confirmed user with password "supersecret"
@@ -22,7 +20,7 @@ Feature: Authentication
     And I fill in "password" with "supersecret"
     And I press "Login"
     Then I should be logged in
-    
+   
   Scenario Outline: Not allow login of a user with bad credentials
     Given "hector" a confirmed user with password "secret"
     When I go to the login page
