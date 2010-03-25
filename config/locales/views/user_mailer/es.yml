@@ -1,7 +1,7 @@
 es:
   user_mailer:
     signup_notification:
-      title: 'Bienvenido a Proman3'
+      title: 'Bienvenido a Proman'
       login_credentials: 'Sus credenciales de acceso son:'
       body: 'Una nueva cuenta se pidió a esta dirección de correo electrónico.
        Si esto es correcto, por favor vaya a esta dirección web:'
