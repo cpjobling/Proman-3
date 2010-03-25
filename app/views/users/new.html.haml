@@ -1,0 +1,7 @@
+- title t('.title')
+
+#account-new.block
+  %h2= yield :title
+  .content.form
+    - semantic_form_for @user, :url => account_path do |f|
+      = render :partial => f, :locals => { :label => t(:register) }

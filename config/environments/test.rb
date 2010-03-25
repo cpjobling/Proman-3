@@ -27,4 +27,17 @@ config.action_mailer.delivery_method = :test
 # like if you have constraints or database-specific column types
 # config.active_record.schema_format = :sql
 
-  config.gem 'rspec-rails', :version => '>= 1.3.2', :lib => false unless File.directory?(File.join(Rails.root, 'vendor/plugins/rspec-rails'))
+config.gem 'rspec-rails', :version => '>= 1.3.2', :lib => false unless File.directory?(File.join(Rails.root, 'vendor/plugins/rspec-rails'))
+config.gem 'term-ansicolor', :lib => false
+config.gem 'treetop', :lib => false
+config.gem 'diff-lcs', :lib => false
+config.gem 'nokogiri', :lib => false
+config.gem 'builder', :lib => false
+config.gem 'rspec', :lib => false, :version => '>= 1.2.4'
+config.gem 'webrat', :lib => 'webrat', :version => '>= 0.4.4'
+config.gem 'cucumber', :version => '>= 0.3.1'
+config.gem 'remarkable_rails', :lib => false
+config.gem 'spicycode-rcov', :lib => 'rcov', :source => 'http://gems.github.com'
+config.gem 'bmabey-email_spec', :lib => 'email_spec', :source => 'http://gems.github.com', :version => '>= 0.1.3'
+config.gem 'sevenwire-forgery', :lib => 'forgery', :source => 'http://gems.github.com'
+config.gem 'notahat-machinist', :lib => 'machinist', :source => 'http://gems.github.com'

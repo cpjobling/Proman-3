@@ -7,11 +7,13 @@
 ENV["RAILS_ENV"] ||= "cucumber"
 require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
 
-require 'cucumber/formatter/unicode' # Remove this line if you don't want Cucumber Unicode support
+#require 'cucumber/formatter/unicode' # Remove this line if you don't want Cucumber Unicode support
 require 'cucumber/rails/rspec'
 require 'cucumber/rails/world'
 require 'cucumber/rails/active_record'
 require 'cucumber/web/tableish'
+require 'email_spec/cucumber'
+#require 'cucumber/formatters/unicode' # Comment out this line if you don't want Cucumber Unicode support
 
 require 'webrat'
 require 'webrat/core/matchers'
