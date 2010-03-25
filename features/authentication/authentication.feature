@@ -3,12 +3,12 @@ Feature: Authentication
   I want to login to the application
   So that I can be productive
 
-  @wip
   Scenario: Display login form to anonymous users
     Given "hector" is an anonymous user
     When I go to the login page
     Then I should see a login form
 
+  @wip
   Scenario: Redirect to account page when user is logged in
     Given "hector" a logged in user
     When I go to the login page

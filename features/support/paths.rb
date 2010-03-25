@@ -28,7 +28,6 @@ module NavigationHelpers
     when /the change password form with bad token/
       edit_password_reset_path
     
-    
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
