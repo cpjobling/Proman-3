@@ -19,7 +19,7 @@ class UserMailer < ActionMailer::Base
   def setup_email(user)
     recipients user.email
     from       I18n.t('user_mailer.from', :email => '<notifications@example.com>')
-    @subject   = "[Proman3] "
+    @subject   = "[Proman] "
     sent_on    Time.now
     body :user => user
   end
