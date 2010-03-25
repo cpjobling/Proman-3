@@ -12,3 +12,26 @@ To download a copy of the latest (HEAD) version go to [github.com/cpjobling/Prom
 
 More detailed documentation will follow.
 
+## Contributors
+
+  - The original version of Proman was written as part of an undergraduate dissertation project by Nicolay Parashkevanov (382392@swansea.ac.uk) between October 2008 and May 2009.
+
+  - Some further development was done by Yapeng 'Tony' Goa (465858@swansea.ac.uk) in 2009-2010.
+
+## Project Dependencies
+
+### Development and Production
+
+  - compass --version 0.8.17
+  - haml  --version 2.2.16
+
+### Test
+  - rspec --version 1.3.0
+  - rspec-rails --version 1.3.2
+
+### Cucumber
+  - cucumber --version 0.6.3
+  - cucumber-rails --version 0.3.0
+  - database_cleaner --version 0.5.0
+  - webrat --version 0.7.0
+  - selenium-client --version 1.2.18
