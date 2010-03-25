@@ -1,6 +1,21 @@
-log/*.log
-tmp/**/*
+.#*
+*~
+*#
+config/database.yml
+config/mongrel_cluster.yml
+coverage
+coverage.data
+db/schema.rb
+db/*.sqlite3
 doc/api
 doc/app
-db/*.sqlite3
+.DS_Store
+log/*.log
+log/*.pid
+*.swp
+tmp/**/*
+tmp/*.html
+vendor/rails
+public/stylesheets/*.css
+rerun.txt
 
