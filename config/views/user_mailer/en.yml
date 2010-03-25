@@ -1,7 +1,7 @@
 en:
   user_mailer:
     signup_notification:
-      title: 'Welcome to proman'
+      title: 'Welcome to Proman'
       login_credentials: 'Your login credentials are:'
       body: 'A new account was requested from this email address.
        If this is correct, please go to this web address'
