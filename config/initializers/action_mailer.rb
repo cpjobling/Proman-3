@@ -3,13 +3,13 @@ ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.raise_delivery_errors = false
 
 if RAILS_ENV == "production"
-  ActionMailer::Base.default_url_options[:host] = 'www.domain.com'
+  ActionMailer::Base.default_url_options[:host] = 'proman.cpjobling.org.uk'
   ActionMailer::Base.perform_deliveries = true
 
   ActionMailer::Base.smtp_settings = {
     :address => "localhost",
     :port => 25,
-    :domain => "domain.com"
+    :domain => "cpjobling.org.uk"
   }
 end
 
@@ -18,12 +18,13 @@ if RAILS_ENV == "development"
   ActionMailer::Base.perform_deliveries = false
 
   ActionMailer::Base.smtp_settings = {
+    :enable_starttls_auto => true,
     :address => "smtp.gmail.com",
     :port => 587,
-    :domain => 'domain.net',
+    :domain => 'gmail.com',
     :authentication => :plain,
-    :user_name => "user_name@gmail.com",
-    :password => "user_password"
+    :user_name => APP_CONFIG['development_smtp_username'], 
+    :password =>  APP_CONFIG['developement_smtp_password']
   }
 
 end

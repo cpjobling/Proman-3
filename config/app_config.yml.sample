@@ -1,0 +1,8 @@
+# For an explanation of this file, see http://stackoverflow.com/questions/2368139/actionmailer-password
+
+# Development settings
+development_smtp_password: secret
+development_smtp_username: username@gmail.com
+# Deployment settings
+deployment_smtp_password: secret
+deployment_smtp_username: username@gmail.com
