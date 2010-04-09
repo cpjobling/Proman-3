@@ -1,0 +1,33 @@
+!!! Strict
+%html{locale_attrs}
+  %head
+    %meta{ :content => "text/html;charset=UTF-8", "http-equiv" => "content-type" }
+    %title&= yield(:title) || "Test-groundwork"
+    = stylesheet_link_tag 'base'
+    = stylesheet_link_tag 'style'
+    = yield :head
+  %body
+    #container
+      #header
+        %h1= link_to 'Test-groundwork', root_path
+        - if current_user
+          #user-navigation
+            %ul
+              %li= link_to t(:profile), account_path
+              %li= link_to t(:logout), logout_path
+            .clear
+        #main-navigation
+          %ul
+            %li.active= link_to t(:home), root_path
+            - if !current_user
+              %li= link_to t(:login), login_path
+              %li= link_to t(:register), new_account_path
+          .clear
+      #main
+        #box-flash
+          .block
+            .flash
+              - flash.each do |name, mesg|
+                %div{ :class => "message #{name}" }
+                  %p&= mesg
+        #box= yield

@@ -1,0 +1,11 @@
+- title t('.title')
+
+#password_resets-new.block
+  %h2= yield :title
+  .content.form
+    %p= t('.instructions')
+    - form_tag password_reset_path do
+      %fieldset.inputs
+        %ol
+          %li= text_field_i18n(User, :email)
+      = submit_button(t '.submit')

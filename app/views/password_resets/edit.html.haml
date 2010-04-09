@@ -1,0 +1,9 @@
+- title t('.title')
+
+#password_resets-edit.block
+  %h2= yield :title
+  .content.form
+    - semantic_form_for @user, :url => password_reset_path(:token => params[:token]), :method => :put do |f|
+      = f.inputs :password, :password_confirmation
+      - f.buttons do
+        = f.commit_button t('.submit')

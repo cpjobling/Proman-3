@@ -1,0 +1,19 @@
+- title t('.title')
+- model_t = lambda { |attr| User.human_attribute_name(attr) }
+#account-show.block
+  .content
+    %h2= yield :title
+  .inner
+    %p
+      %b= model_t['login']
+      &= @user.login
+    %p
+      %b= model_t['last_login_at']
+      &= @user.last_login_at
+    %p
+      %b= model_t['last_login_ip']
+      &= @user.last_login_ip
+    %p
+      %b= model_t['current_login_ip']
+      &= @user.current_login_ip
+    = link_to t('.edit'), edit_account_path
