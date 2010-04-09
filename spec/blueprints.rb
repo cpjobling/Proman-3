@@ -1,3 +1,6 @@
+require 'machinist/active_record'
+require 'sham'
+
 Sham.login { InternetForgery.user_name }
 Sham.password { BasicForgery.password }
 Sham.email { InternetForgery.email_address }
