@@ -48,13 +48,13 @@ Feature: Registration
     Given "hector" an unconfirmed user
     And I receive an email
     When I open the email
-    Then I should see "confirm" in the email
+    Then I should see "confirm" in the email body
 
   Scenario: Confirm account using mail activation token
     Given "hector" an unconfirmed user
     When I receive an email
     And I open the email
-    Then I should see "confirm" in the email
+    Then I should see "confirm" in the email body
     When I follow "confirm" in the email
     Then I should see "Account confirmed!"
     And I should be logged in
@@ -68,9 +68,9 @@ Feature: Registration
     Given "hector" an unconfirmed user
     And I receive an email
     And I open the email
-    And I should see "confirm" in the email
+    And I should see "confirm" in the email body
     When I follow "confirm" in the email
     Then I should be logged in
     And I should have 2 emails
     Then I open the most recent email
-    And I should see "Welcome" in the subject
+    And I should see /Welcome/ in the email subject

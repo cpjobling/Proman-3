@@ -1,13 +1,19 @@
 module NavigationHelpers
-  # Maps a name to a path. Used by the
+  # Maps a static name to a static route.
   #
-  #   When /^I go to (.+)$/ do |page_name|
+  # This method is *not* designed to map from a dynamic name to a
+  # dynamic route like <tt>post_comments_path(post)</tt>. For dynamic
+  # routes like this you should *not* rely on #path_to, but write
+  # your own step definitions instead. Example:
   #
-  # step definition in web_steps.rb
+  #   Given /I am on the comments page for the "(.+)" post/ |name|
+  #     post = Post.find_by_name(name)
+  #     visit post_comments_path(post)
+  #   end
   #
   def path_to(page_name)
     case page_name
-    
+
     when /the homepage/i
       root_path
 
@@ -36,7 +42,7 @@ module NavigationHelpers
 
     else
       raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
-        "Now, go and add a mapping in #{__FILE__}"
+        "Now, go and add a mapping in features/support/paths.rb"
     end
   end
 end

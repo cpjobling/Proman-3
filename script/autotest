@@ -1,0 +1,4 @@
+#!/bin/sh
+
+AUTOFEATURE=true autospec
+

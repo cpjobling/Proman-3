@@ -26,16 +26,15 @@ config.action_mailer.delivery_method = :test
 # This is necessary if your schema can't be completely dumped by the schema dumper,
 # like if you have constraints or database-specific column types
 # config.active_record.schema_format = :sql
-
-config.gem 'rspec-rails', :version => '>= 1.3.2', :lib => false unless File.directory?(File.join(Rails.root, 'vendor/plugins/rspec-rails'))
 config.gem 'term-ansicolor', :lib => false
 config.gem 'treetop', :lib => false
 config.gem 'diff-lcs', :lib => false
 config.gem 'nokogiri', :lib => false
 config.gem 'builder', :lib => false
-config.gem 'rspec', :lib => false, :version => '>= 1.2.4'
-config.gem 'webrat', :lib => 'webrat', :version => '>= 0.4.4'
-config.gem 'cucumber', :version => '>= 0.3.1'
+config.gem 'rspec', :lib => false, :version => '>= 1.3.0'
+config.gem 'rspec-rails', :lib => false, :version => '>= 1.3.2'
+config.gem 'webrat', :lib => 'webrat', :version => '>= 0.7.0'
+config.gem 'cucumber', :version => '>= 0.6.4'
 config.gem 'remarkable_rails', :lib => false
 config.gem 'spicycode-rcov', :lib => 'rcov', :source => 'http://gems.github.com'
 config.gem 'bmabey-email_spec', :lib => 'email_spec', :source => 'http://gems.github.com', :version => '>= 0.1.3'
