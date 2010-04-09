@@ -21,9 +21,18 @@ config.action_controller.allow_forgery_protection    = false
 # ActionMailer::Base.deliveries array.
 config.action_mailer.delivery_method = :test
 
+config.gem 'bmabey-email_spec', :lib => 'email_spec', :source => 'http://gems.github.com', :version => '>= 0.1.3'
+config.gem 'builder', :lib => false
 config.gem 'cucumber-rails',   :lib => false, :version => '>=0.3.0' unless File.directory?(File.join(Rails.root, 'vendor/plugins/cucumber-rails'))
 config.gem 'database_cleaner', :lib => false, :version => '>=0.5.0' unless File.directory?(File.join(Rails.root, 'vendor/plugins/database_cleaner'))
-config.gem 'webrat',           :lib => false, :version => '>=0.7.0' unless File.directory?(File.join(Rails.root, 'vendor/plugins/webrat'))
+config.gem 'diff-lcs', :lib => false
+config.gem 'nokogiri', :lib => false
+config.gem 'notahat-machinist', :lib => 'machinist', :source => 'http://gems.github.com'
+config.gem 'remarkable_rails', :lib => false
 config.gem 'rspec',            :lib => false, :version => '>=1.3.0' unless File.directory?(File.join(Rails.root, 'vendor/plugins/rspec'))
 config.gem 'rspec-rails',      :lib => false, :version => '>=1.3.2' unless File.directory?(File.join(Rails.root, 'vendor/plugins/rspec-rails'))
-
+config.gem 'sevenwire-forgery', :lib => 'forgery', :source => 'http://gems.github.com'
+config.gem 'spicycode-rcov', :lib => 'rcov', :source => 'http://gems.github.com'
+config.gem 'term-ansicolor', :lib => false
+config.gem 'treetop', :lib => false
+config.gem 'webrat',           :lib => false, :version => '>=0.7.0' unless File.directory?(File.join(Rails.root, 'vendor/plugins/webrat'))

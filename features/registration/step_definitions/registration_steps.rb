@@ -26,7 +26,7 @@ Given /^"(.*)" a confirmed user$/ do |name|
   Given "\"#{name}\" an unconfirmed user"
   And "I receive an email"
   And "I open the email"
-  And "I should see \"confirm\" in the email"
+  And "I should see \"confirm\" in the email body"
   When "I follow \"confirm\" in the email"
   Then "I should see my account page"
   Then "a clear email queue"
@@ -37,7 +37,7 @@ Given /^"(.*)" a confirmed user with password "(.*)"$/ do |name, password|
   Given "\"#{name}\" an unconfirmed user with password \"#{password}\""
   And "I receive an email"
   And "I open the email"
-  And "I should see \"confirm\" in the email"
+  And "I should see \"confirm\" in the email body"
   When "I follow \"confirm\" in the email"
   Then "I should see my account page"
   visit '/logout'

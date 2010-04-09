@@ -32,3 +32,8 @@ if RAILS_ENV == "test"
   ActionMailer::Base.default_url_options[:host] = 'www.example.com'
   ActionMailer::Base.delivery_method = :test
 end
+
+if RAILS_ENV == "cucumber"
+  ActionMailer::Base.default_url_options[:host] = 'www.example.com'
+  ActionMailer::Base.delivery_method = :test
+end

@@ -5,7 +5,7 @@ Given /"(.*)" a user that opened his reset password email/ do |name|
   And "I press \"Reset Password\""
   When "\I receive an email"
   And "I open the email"
-  Then "I should see \"reset\" in the email"
+  Then "I should see \"reset\" in the email body"
   #And "I follow \"reset\" in the email"
 end
 
