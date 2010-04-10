@@ -26,6 +26,7 @@ More detailed documentation will follow.
   - authlogic --version 2.0.11
   - justinfrench-formtastic 
   - rdiscount
+  - validation_reflection
 
 ### Test
   - rspec --version 1.3.0

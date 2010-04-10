@@ -11,4 +11,11 @@ User.blueprint do
   email
   password { pwd }
   password_confirmation { pwd }
+  title { 'Dr' }
+  first_name { 'Christopher' }
+  last_name { 'Jobling' }
+  initials { 'P.' }
+  terms { true }
+  staff_or_student_number { 123456 }
+  known_as { 'Chris' }
 end

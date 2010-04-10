@@ -1,0 +1,6 @@
+en:
+  formtastic:
+    titles:
+      account_details: "Account details"
+      user_details: "User details"
+    

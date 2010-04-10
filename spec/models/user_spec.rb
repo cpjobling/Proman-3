@@ -49,6 +49,37 @@ describe User do
       user.should have(1).error_on(:password_confirmation)
     end
 
+    it "should require a first name" do
+      user =  build_user(:first_name => nil)
+      user.should have(1).error_on(:first_name)
+    end
+    
+    it "should require a last name" do
+      user =  build_user(:last_name => nil)
+      user.should have(1).error_on(:last_name)
+    end
+    
+    it "should require a non-blank staff or student number" do
+      user =  build_user(:staff_or_student_number => nil)
+      user.should have(3).error_on(:staff_or_student_number)
+    end
+    
+    it "should require a numeric staff or student number" do
+      user =  build_user(:staff_or_student_number => 'fred123')
+      user.should have(1).error_on(:staff_or_student_number)
+    end
+    
+    it "should require a number with at least 6 digits" do
+      ['1','12','123','1234','12345'].each do |number|
+        user =  build_user(:staff_or_student_number => number)
+        user.should have(1).error_on(:staff_or_student_number)
+      end
+    end
+    
+    it "should require an integer" do
+      user =  build_user(:staff_or_student_number => '1234.0')
+      user.should have(1).error_on(:staff_or_student_number)
+    end
   end
 
   context "Requesting password reset" do

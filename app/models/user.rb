@@ -16,6 +16,12 @@ class User < ActiveRecord::Base
   acts_as_authentic
 
   attr_accessor :validate_password
+  
+  validates_presence_of :first_name, :last_name, :staff_or_student_number
+  validates_acceptance_of :terms, :accept => true
+  validates_size_of :staff_or_student_number, :minimum => 6, :on => :create
+  validates_numericality_of :staff_or_student_number, :only_integer => true, :on => :create
+  # TODO: validate that email is part of institutional domain
 
   def recently_confirmed?
     @recent_confirmation

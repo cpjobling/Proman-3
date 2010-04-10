@@ -1,3 +1,15 @@
-= semantic_form.inputs :login, :email, :password, :password_confirmation
+- semantic_form.inputs :name => :account_details, :id => 'account_details' do
+  = semantic_form.input :login, :required => true
+  = semantic_form.input :email, :required => true
+  = semantic_form.input :password, :required => true
+  = semantic_form.input :password_confirmation, :required => true
+
+- semantic_form.inputs :name => :user_details, :id => 'user-details' do
+  = semantic_form.input :title, :as => :select, :collection => get_titles 
+  = semantic_form.input :first_name
+  = semantic_form.input :initials
+  = semantic_form.input :last_name
+  = semantic_form.input :staff_or_student_number
+  = semantic_form.input :terms 
 - semantic_form.buttons do
   = semantic_form.commit_button label

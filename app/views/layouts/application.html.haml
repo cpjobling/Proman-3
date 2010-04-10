@@ -2,9 +2,10 @@
 %html{locale_attrs}
   %head
     %meta{ :content => "text/html;charset=UTF-8", "http-equiv" => "content-type" }
-    %title&= yield(:title) || "proman"
+    %title&= yield(:title) || "Proman"
     = stylesheet_link_tag 'compiled/base.css'
     = stylesheet_link_tag 'compiled/style.css'
+    = formtastic_stylesheet_link_tag
     = yield :head
   %body
     #container
