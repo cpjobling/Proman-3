@@ -3,9 +3,10 @@ Given /"(.*)" is an anonymous user/ do |name|
 end
 
 Given /^"(.*)" an unconfirmed user$/ do |name|
+  @email = "#{name}@mail.com"
   When "I go to the registration form"
   And "I fill in \"login\" with \"#{name}\""
-  And "I fill in \"email\" with \"#{name}@mail.com\""
+  And "I fill in \"email\" with \"#{@email}\""
   And "I fill in \"password\" with \"secret\""
   And "I fill in \"confirmation\" with \"secret\""
   When "I press \"Register\""
@@ -13,9 +14,10 @@ Given /^"(.*)" an unconfirmed user$/ do |name|
 end
 
 Given /^"(.*)" an unconfirmed user with password "(.*)"$/ do |name, password|
+  @email = "#{name}@mail.com"
   When "I go to the registration form"
   And "I fill in \"login\" with \"#{name}\""
-  And "I fill in \"email\" with \"#{name}@mail.com\""
+  And "I fill in \"email\" with \"#{@email}\""
   And "I fill in \"password\" with \"#{password}\""
   And "I fill in \"confirmation\" with \"#{password}\""
   When "I press \"Register\""

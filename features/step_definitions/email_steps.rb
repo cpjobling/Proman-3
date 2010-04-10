@@ -27,8 +27,7 @@
 # If logged in return current user email if not use test mail
 module EmailHelpers
   def current_email_address
-    user = controller.send(:current_user)
-    user ? user.email : "hector@mail.com"
+    @email || (@current_user && @current_user.email) || "hector@mail.com"
   end
 end
 
