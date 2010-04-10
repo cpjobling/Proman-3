@@ -6,7 +6,7 @@ end
 
 Given /^"(.*)" a logged in user$/ do |name|
   Given "\"#{name}\" a confirmed user"
-  When "I fill in \"login\" with \"hector\""
+  When "I fill in \"login\" with \"#{name}\""
   And "I fill in \"password\" with \"secret\""
   And "I press \"Login\""
   Then "I should see my account page"
