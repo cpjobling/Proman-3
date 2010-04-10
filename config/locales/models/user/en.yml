@@ -25,3 +25,10 @@ en:
           ms: 'Ms'
           dr: 'Dr'
           prof: 'Prof.'
+    errors:
+      models:
+        user:
+          attributes:
+            staff_or_student_number:
+              invalid: 'Invalid format: staff or student number should be 6 or more digits'
+

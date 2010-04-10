@@ -61,7 +61,7 @@ describe User do
     
     it "should require a non-blank staff or student number" do
       user =  build_user(:staff_or_student_number => nil)
-      user.should have(3).error_on(:staff_or_student_number)
+      user.should have(1).error_on(:staff_or_student_number)
     end
     
     it "should require a numeric staff or student number" do
