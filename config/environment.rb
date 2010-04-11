@@ -7,13 +7,15 @@ RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
+  config.gem 'compass', :version => '>= 0.8.17'
+  config.gem 'haml', :version => '>=2.2.16'
   config.active_record.observers = :user_observer
   config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
   config.gem 'authlogic', :version => '= 2.0.11'
   config.gem 'justinfrench-formtastic', :lib => 'formtastic', :source => 'http://gems.github.com'
   config.gem 'rdiscount'
   config.gem 'compass', :version => '>= 0.8.17'
-  config.gem 'haml', :version => '>=2.2.16'
+  config.gem 'haml'
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.

@@ -16,7 +16,7 @@ en:
         first_name: 'First (given) name'
         last_name: 'Last (family) name'
         initials: 'Initials'
-        terms: 'Click to confirm that you have read and accept our terms and conditions'
+        terms: 'I accept'
         staff_or_student_number: 'Staff or student number'
         titles:
           mr: 'Mr'

@@ -22,11 +22,12 @@ More detailed documentation will follow.
 
 ### Development and Production
   - compass --version 0.8.17
-  - haml  --version 2.2.16
+  - haml-edge
   - authlogic --version 2.0.11
   - justinfrench-formtastic 
   - rdiscount
   - validation_reflection
+  - [http://github.com/activestylus/formtastic-sass/](activestylus/formtastic-sass)
 
 ### Test
   - rspec --version 1.3.0
