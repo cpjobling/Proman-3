@@ -17,33 +17,86 @@ Feature: Registration
     And I fill in "email" with "hector@mail.com"
     And I fill in "password" with "secret"
     And I fill in "confirmation" with "secret"
-    And I press "Register"
+    
+    And I select "Mr" from "title"
+    And I fill in "First (given) name" with "Christopher"
+    And I fill in "initials" with "P."
+    And I fill in "Last (family) name" with "Jobling"  
+    And I fill in "I preferred to be known as" with "Chris"
+    And I fill in "Staff or student number" with "123456"  
+    And I check "I accept"
+
+    When I press "Register"
     Then I should have a successful registration
 
   Scenario Outline: Not allow an anonymous user to create account with incomplete input
-    Given "hector" is an anonymous user
+    Given "chris" is an anonymous user
     When I go to the registration form
     And I fill in "login" with "<login>"
     And I fill in "email" with "<email>"
     And I fill in "password" with "<password>"
     And I fill in "confirmation" with "<password_confirmation>"
+
+    And I fill in "First (given) name" with "Christopher"
+    And I fill in "Last (family) name" with "Jobling"
+    And I fill in "Staff or student number" with "123456"
+    And I check "I accept"
+    
     And I press "Register"
     Then I should have an unsuccessful registration
  
   Examples: Additional input needed
-    | login  |      email      | password | password_confirmation |
-    |        |                 |          |                       |
-    | hector |                 |          |                       |
-    | hector | hector@mail.com |          |                       |
-    | hector | hector@mail.com |  secret  |                       |
+    | login | email          | password | password_confirmation |
+    |       |                |          |                       |
+    | chris |                |          |                       |
+    | chris | chris@mail.com |          |                       |
+    | chris | chris@mail.com | secret   |                       |
+
 
   Examples: Bad password and confirmation combinations
-    | login  |      email      | password | password_confirmation |
-    | hector | hector@mail.com |          |                       |
-    | hector | hector@mail.com |  secret  |                       |
-    | hector | hector@mail.com |          |        secret         |
-    | hector | hector@mail.com |  secret  |     othersecret       |
+    | login | email          | password | password_confirmation |
+    | chris | chris@mail.com |          |                       |
+    | chris | chris@mail.com | secret   |                       |
+    | chris | chris@mail.com |          | secret                |
+    | chris | chris@mail.com | secret   | othersecret           |
 
+
+  Scenario Outline: Not allow an anonymous user to create account with incomplete profile data
+    Given "chris" is an anonymous user
+    When I go to the registration form
+    And I fill in "login" with "cpjobling"
+    And I fill in "email" with "cpjobling@mail.com"
+    And I fill in "password" with "secret"
+    And I fill in "confirmation" with "secret"
+    
+    And I fill in "First (given) name" with "<first_name>"
+    And I fill in "Last (family) name" with "<last_name>"
+    And I fill in "Staff or student number" with "<staff_or_student_number>"
+    And I check "I accept"
+    And I press "Register"
+    Then I should have an unsuccessful registration
+
+  Examples: Additional input needed
+    | first_name  | last_name | staff_or_student_number |
+    | Christopher | Jobling   |                         |
+    |             | Jobling   | 123456                  |
+    | Christopher |           | 123456                  |
+
+  Scenario Outline: Not allow an anonymous user to create and account unless he accepts the terms and conditions
+    Given "chris" is an anonymous user
+    When I go to the registration form
+    
+    And I fill in "login" with "cpjobling"
+    And I fill in "email" with "cpjobling@mail.com"
+    And I fill in "password" with "secret"
+    And I fill in "confirmation" with "secret"
+    
+    And I fill in "First (given) name" with "Christopher"
+    And I fill in "Last (family) name" with "Jobling"
+    And I fill in "Staff or student number" with "123456"
+    And I press "Register"
+    Then I should have an unsuccessful registration
+            
   Scenario: Send a mail activation at a successful account creation
     Given "hector" an unconfirmed user
     And I receive an email

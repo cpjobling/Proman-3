@@ -9,6 +9,16 @@ Given /^"(.*)" an unconfirmed user$/ do |name|
   And "I fill in \"email\" with \"#{@email}\""
   And "I fill in \"password\" with \"secret\""
   And "I fill in \"confirmation\" with \"secret\""
+
+  And "I select \"Mr\" from \"title\""
+  And "I fill in \"First (given) name\" with \"#{name}\""
+  And "I fill in \"initials\" with \"P.\""
+  And "I fill in \"Last (family) name\" with \"Jobling\""  
+  And "I fill in \"I preferred to be known as\" with \"Hector\""  
+    
+  And "I fill in \"Staff or student number\" with \"123456\""  
+  And "I check \"I accept\""
+  
   When "I press \"Register\""
   Then "I should have a successful registration"
 end
@@ -20,6 +30,16 @@ Given /^"(.*)" an unconfirmed user with password "(.*)"$/ do |name, password|
   And "I fill in \"email\" with \"#{@email}\""
   And "I fill in \"password\" with \"#{password}\""
   And "I fill in \"confirmation\" with \"#{password}\""
+
+  And "I select \"Mr\" from \"title\""
+  And "I fill in \"First (given) name\" with \"#{name}\""
+  And "I fill in \"initials\" with \"P.\""
+  And "I fill in \"Last (family) name\" with \"Jobling\""  
+  And "I fill in \"I preferred to be known as\" with \"Hector\""  
+    
+  And "I fill in \"Staff or student number\" with \"123456\""  
+  And "I check \"I accept\""
+  
   When "I press \"Register\""
   Then "I should have a successful registration"
 end
@@ -49,7 +69,13 @@ Then /^I should see the registration form$/ do
   response.should contain('Login')
   response.should contain('Email')
   response.should contain('Password')
-  response.should contain('Confirmation')
+  response.should contain('Title')
+  response.should contain('First (given) name')
+  response.should contain('Initials')
+  response.should contain('Last (family) name')
+  response.should contain('Staff or student number')
+  response.should contain('I accept')
+  response.should contain('Register')
 end
 
 Then /^I should have a successful registration$/ do

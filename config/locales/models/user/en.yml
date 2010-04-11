@@ -16,6 +16,7 @@ en:
         first_name: 'First (given) name'
         last_name: 'Last (family) name'
         initials: 'Initials'
+        known_as: 'I preferred to be known as'
         terms: 'I accept'
         staff_or_student_number: 'Staff or student number'
         titles:
