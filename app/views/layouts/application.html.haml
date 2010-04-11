@@ -27,8 +27,9 @@
           = link_to_with_highlight "Login", login_path
       #header
         %h1= t(:site_name)
+        %h2= t(:site_mission)
         #navset
-          = navigation [:root]
+          = navigation [:home, :projects, :contact, :about]
           = yield(:subnav)
       #content
         - flash.each do |name, msg|
