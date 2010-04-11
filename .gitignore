@@ -17,8 +17,5 @@ tmp/**/*
 tmp/*.html
 vendor/rails
 public/stylesheets/*.css
-<<<<<<< HEAD
 rerun.txt
-
-=======
->>>>>>> e4053de1a04975450ba7e50679f86a6144798f1b
+nbproject

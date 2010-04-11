@@ -6,16 +6,21 @@ Feature: Application menu
   Scenario: Display standard menu to anonymous users
     Given "guest" is an anonymous user
     When I go to the homepage
-    Then I should see "Home"
-    And I should see "Login"
-    And I should see "Register"
+    Then I should see "Home" within "#navigation"
+    And I should see "Register" within "#navigation"
+    And I should see "Login" within "#navigation"
+    And I should see "Home" within "#navset"
+    And I should see "Projects" within "#navset"
+    And I should see "Contact" within "#navset"
+    And I should see "About" within "#navset"
 
-  Scenario: Display extra features menu to registered users
+
+  Scenario: Display extra features menu to logged in users
     Given "chris" a logged in user
     When I go to the homepage
-    Then I should see "Home"
-    And I should see "Logout"
-    And I should not see "Register"
+    Then I should see "Home" within "#navigation"
+    And I should see "Logout" within "#navigation"
+    And I should not see "Register" within "#navigation"
 
   Scenario: Display student features to student users
     Given "mark" a logged in user

@@ -26,8 +26,8 @@
           |
           = link_to_with_highlight "Login", login_path
       #header
-        %h1= t(:site_name)
-        %h2= t(:site_mission)
+        %h1= proman
+        %h2= t(:title)
         #navset
           = navigation [:home, :projects, :contact, :about]
           = yield(:subnav)

@@ -17,6 +17,9 @@ module NavigationHelpers
     when /the homepage/i
       root_path
 
+    when /the about page/
+      about_path
+      
     when /the registration form/i
       new_account_path
 
@@ -28,6 +31,7 @@ module NavigationHelpers
 
     when /the login page/
       login_path
+      
     when /the reset password page/
       new_password_reset_path
 
