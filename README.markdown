@@ -28,6 +28,7 @@ More detailed documentation will follow.
   - rdiscount
   - validation_reflection
   - [http://github.com/activestylus/formtastic-sass/](activestylus/formtastic-sass)
+  - [http://github.com/rpheath/navigation_helper](rpheath/navigation_helper)
 
 ### Test
   - rspec --version 1.3.0
