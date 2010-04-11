@@ -1,3 +1,31 @@
+form { background: #eee; }
+form li { padding: 10px 0px; }
+form li li { padding: 0; }
+form fieldset { margin-top: 20px; }
+form li fieldset { padding: 0; }
+form legend, form label { color: #333; }
+form label, form .label { padding-bottom: 5px; }
+form label abbr, form .label abbr { color: #f00; }
+form label { line-height: 1.4em; font-size: 13px; }
+form legend span { font-size: 1.4em; line-height: 1em; }
+form legend span.label { font-size: 1em; }
+form select { padding: 3px; }
+form input, form textarea, form select { font-family: inherit; font-size: 14px; }
+form textarea, form input { border: 1px solid #999; padding: 6px 8px; line-height: 100%; }
+form .date li, form .time li, form .datetime li { margin: 0 0.3em 0 0; }
+form #errorExplanation li { margin-left: 15px; }
+form form p, form .errors { padding: 3px 0px; }
+form .required input, form .required textarea, form .required select { background-color: #fff; }
+form .error input, form .error textarea, form .error select { background-color: #fcc; border: 1px solid #f66; }
+form .optional input, form .optional textarea, form .optional select { background-color: #fff; }
+form .errors { color: #a00; }
+form .errors li { margin-left: 1.2em; }
+form p.inline-errors { color: #f00; }
+form p.inline-hints { color: #777; }
+form .buttons { padding-top: 8px; padding-bottom: 8px; margin-top: 8px; }
+form .buttons li { padding-right: 0.5em; }
+form .buttons input { border: 1px solid #999; }
+
 body { line-height: 1.5; font-family: Helvetica Neue, Arial, Helvetica, sans-serif; color: #000; background: none; font-size: 10pt; }
 
 .container { background: none; }
@@ -25,3 +53,48 @@ blockquote { margin: 1.5em; padding: 1em; font-style: italic; font-size: .9em; }
 .quiet { color: #999; }
 
 .hide { display: none; }
+
+.formtastic ul, .formtastic ol, .formtastic legend, .formtastic p { margin: 0; padding: 0; }
+.formtastic li { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; }
+.formtastic fieldset { display: block; *display: inline-block; }
+.formtastic fieldset:after { content: " "; display: block; height: 0; clear: both; visibility: hidden; }
+.formtastic abbr, .formtastic acronym { border: 0; font-variant: normal; font-weight: normal; }
+.formtastic ol, .formtastic ul { list-style: none; }
+.formtastic label { display: block; *display: inline-block; }
+.formtastic label:after { content: " "; display: block; height: 0; clear: both; visibility: hidden; }
+.formtastic input, .formtastic textarea { vertical-align: middle; }
+.formtastic .check_boxes input, .formtastic .radio input { margin: 0; }
+.formtastic .check_boxes label, .formtastic .radio label { cursor: pointer; }
+.formtastic .hidden { display: none; }
+.formtastic .date li, .formtastic .time li, .formtastic .datetime li { float: left; width: auto; clear: none; }
+.formtastic .date label, .formtastic .time label, .formtastic .datetime label { display: none; width: auto; }
+.formtastic .date input, .formtastic .time input, .formtastic .datetime input { display: inline; margin: 0; padding: 0; }
+.formtastic .errors { list-style: square; }
+.formtastic .errors li { padding: 0; border: none; display: list-item; float: none; clear: both; }
+.formtastic .inputs { z-index: 99; }
+.formtastic .buttons li { float: left; }
+.formtastic li { *display: inline-block; display: block; }
+.formtastic li:after { content: " "; display: block; height: 0; clear: both; visibility: hidden; }
+.formtastic li fieldset { border: none; position: relative; margin-top: 0px; }
+.formtastic li legend { display: block; margin-bottom: 0; }
+.formtastic li .label { display: block; clear: both; background: transparent; }
+.formtastic li ol { float: left; margin: 0; }
+.formtastic li ol li { padding: 0; border: 0; display: inline; }
+.formtastic fieldset { width: 100%; }
+.formtastic label { float: left; width: 20%; text-align: left; padding-left: 0; }
+.formtastic li ol { padding: 0 10% 0 20%; }
+.formtastic li fieldset legend, .formtastic li fieldset legend .label { display: block; }
+.formtastic li fieldset legend { width: 20%; text-align: left; display: inline; float: left; clear: none; padding: 0; width: 100%; }
+.formtastic li fieldset .label { position: absolute; width: 20%; top: 0px; left: 0; }
+.formtastic li fieldset label { padding-left: 0; }
+.formtastic li fieldset label, .formtastic li fieldset input { width: auto; display: inline; clear: none; text-align: left; }
+.formtastic li fieldset select { padding: 0; clear: both; display: block; }
+.formtastic .inline-hints, .formtastic .inline-errors, .formtastic .errors { margin: 0 0 0 20%; }
+.formtastic input, .formtastic textarea { width: 70%; }
+.formtastic select { width: auto; }
+.formtastic .checkbox li, .formtastic .radio li { display: block; clear: both; }
+.formtastic .checkbox input, .formtastic .radio input { border: none; }
+.formtastic .buttons { padding-left: 20%; width: 80%; }
+.formtastic .buttons input { width: auto; }
+.formtastic .buttons li { width: auto; float: left; display: inline; }
+.formtastic #errorExplanation { margin-left: 20%; width: 70%; }

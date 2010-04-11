@@ -18,8 +18,6 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-
-    render :new, :layout => 'single_column'
   end
 
   def create
@@ -30,7 +28,7 @@ class UsersController < ApplicationController
       flash[:notice] = t :register_successful
       redirect_to root_url
     else
-      render :new, :layout => 'single_column'
+      render :new
     end
   end
 

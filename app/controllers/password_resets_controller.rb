@@ -13,7 +13,6 @@
 #   limitations under the License.
 #
 class PasswordResetsController < ApplicationController
-  layout 'single_column'
 
   before_filter :require_no_user
   before_filter :load_user_with_token, :only => [:edit, :update]
