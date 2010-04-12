@@ -6,37 +6,38 @@
   Want to help?
 
 - content_for :sidebar do
-  Proman-3 needs your help to get much needed translations.
+  =proman
+  needs your help to get much needed translations.
   So fork away and send those pull requests.
 
-#home-index.block
-  .content
-    %h2 Base Application Template
-    .inner
-      %p Thanks for using Base application template.
-      :markdown
-        ### Implemented Features
-        * Authentication: Using authlogic gem.
-        * Internationalization: Being :es the only translated language.
-        * Email activation.
-        * Password reset.
-        * Configuration of a functional BDD environment.
-        * Test Coverage: >=95%.
-        * Basic Layout (Based in pilu/web-app-theme).
-        * Ruby 1.9 Compatible
-
-        ### Links
-        * [git](http://git-scm.com/)
-        * [rspec](http://github.com/dchelimsky/rspec/tree/master)
-        * [rspec-rails](http://github.com/dchelimsky/rspec-rails/tree/master)
-        * [cucumber](http://github.com/aslakhellesoy/cucumber/tree/master)
-        * [webrat](http://github.com/brynary/webrat/tree/master)
-        * [remarkable](http://github.com/carlosbrando/remarkable/tree/master)
-        * [email-spec](http://github.com/bmabey/email-spec/tree/master)
-        * [forgery](http://github.com/sevenwire/forgery/tree/master)
-        * [machinist](http://github.com/notahat/machinist/tree/master)
-        * [authlogic](http://github.com/binarylogic/authlogic/tree/master)
-        * [haml](http://github.com/nex3/haml/tree/master)
-        * [web-app-theme](http://github.com/pilu/web-app-theme/tree/master)
-        * [rdiscount](http://github.com/rtomayko/rdiscount/tree/master)
-        * [formtastic](http://github.com/justinfrench/formtastic/tree/master)
+%p
+  = proman
+  is the new on-line project selection tool that has been
+  developed for the School of Engineering to help manage the EG-353 Research Project.
+%p From this page you can:
+%ul
+  / If you are an administrator  
+  %li
+    Administer
+    = proman
+    \.
+  / If you are a coordinator  
+  %li 
+    Coordinate the students, projects and supervisors within your research centre (coming soon).
+  / If you are staff  
+  %li
+    View and amend your
+    = link_to "your account details", account_path
+    details.
+%h3 Please report problems
+%p
+  This is beta software, so please email details of any problems or issues that you
+  encounter to the project coordinator whose details you will find on the
+  = link_to "contact page", contact_path
+  \.
+%p
+  A discussion forum for
+  = proman
+  has also been established on the
+  %a{:href => "http://eg-353.ning.com/"} EG-353 Social Network
+  \.
