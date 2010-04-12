@@ -14,5 +14,6 @@
 #
 class HomeController < ApplicationController
   def index
+    @title = t('home.index.title')
   end
 end

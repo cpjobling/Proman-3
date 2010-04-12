@@ -1,0 +1,11 @@
+en:
+  about:
+    index:
+      title: 'About Proman'
+    contact:
+      title: 'Contact Us'
+    tos:
+      title: 'Terms of Service'
+    license:
+      title: 'Apache License, Version 2.0'
+      

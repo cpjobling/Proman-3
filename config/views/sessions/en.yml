@@ -1,9 +1,0 @@
-en:
-  login_successful: 'Login successful!'
-  login_unsuccessful: 'Incorrect login or password'
-  logout_successful: 'Logout successful!'
-  sessions:
-    new:
-      title: 'Login'
-      lost_password: 'Lost password?'
-      submit: 'Login'

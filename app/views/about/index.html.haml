@@ -1,4 +1,5 @@
-- title = @title
+- title t('title')
+
 - slogan = quotation_generator("You and I ought not to die before we have explained ourselves to each other", :author => "John Adams", :born => 1735, :died => 1826)
 
 = render(:partial => "shared/about", :locals => {:page_title => @title})

@@ -20,6 +20,15 @@ module NavigationHelpers
     when /the about page/
       about_path
       
+    when /the terms of service page/
+      tos_path
+      
+    when /the software license page/
+      license_path
+      
+    when /the contact us page/
+      contact_path
+      
     when /the registration form/i
       new_account_path
 

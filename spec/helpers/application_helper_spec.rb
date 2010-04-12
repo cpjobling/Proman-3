@@ -54,6 +54,5 @@ describe ApplicationHelper do
       logo.should == "<em>Proman<sup>&beta;</sup></em>"
     end
   end
-  
-  
+
 end
