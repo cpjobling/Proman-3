@@ -1,100 +1,73 @@
-form { background: #eee; }
-form li { padding: 10px 0px; }
-form li li { padding: 0; }
-form fieldset { margin-top: 20px; }
-form li fieldset { padding: 0; }
-form legend, form label { color: #333; }
-form label, form .label { padding-bottom: 5px; }
-form label abbr, form .label abbr { color: #f00; }
-form label { line-height: 1.4em; font-size: 13px; }
-form legend span { font-size: 1.4em; line-height: 1em; }
-form legend span.label { font-size: 1em; }
-form select { padding: 3px; }
-form input, form textarea, form select { font-family: inherit; font-size: 14px; }
-form textarea, form input { border: 1px solid #999; padding: 6px 8px; line-height: 100%; }
-form .date li, form .time li, form .datetime li { margin: 0 0.3em 0 0; }
-form #errorExplanation li { margin-left: 15px; }
-form form p, form .errors { padding: 3px 0px; }
-form .required input, form .required textarea, form .required select { background-color: #fff; }
-form .error input, form .error textarea, form .error select { background-color: #fcc; border: 1px solid #f66; }
-form .optional input, form .optional textarea, form .optional select { background-color: #fff; }
-form .errors { color: #a00; }
-form .errors li { margin-left: 1.2em; }
-form p.inline-errors { color: #f00; }
-form p.inline-hints { color: #777; }
-form .buttons { padding-top: 8px; padding-bottom: 8px; margin-top: 8px; }
-form .buttons li { padding-right: 0.5em; }
-form .buttons input { border: 1px solid #999; }
-
-body { line-height: 1.5; font-family: Helvetica Neue, Arial, Helvetica, sans-serif; color: #000; background: none; font-size: 10pt; }
-
-.container { background: none; }
-
-hr { background: #ccc; color: #ccc; width: 100%; height: 2px; margin: 2em 0; padding: 0; border: none; }
-hr.space { background: #fff; color: #fff; }
-
-h1, h2, h3, h4, h5, h6 { font-family: Helvetica Neue, Arial, Helvetica, sans-serif; }
-
-code { font-size: .9em; font-family: 'andale mono', 'lucida console', monospace; }
-
-img { display: inline; float: left; margin: 1.5em 1.5em 1.5em 0; }
-
-a img { border: none; }
-a:link, a:visited { background: transparent; font-weight: 700; text-decoration: underline; }
-
-p img.top { margin-top: 0; }
-
-blockquote { margin: 1.5em; padding: 1em; font-style: italic; font-size: .9em; }
-
-.small { font-size: .9em; }
-
-.large { font-size: 1.1em; }
-
-.quiet { color: #999; }
-
-.hide { display: none; }
-
-.formtastic ul, .formtastic ol, .formtastic legend, .formtastic p { margin: 0; padding: 0; }
-.formtastic li { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; }
-.formtastic fieldset { display: block; *display: inline-block; }
-.formtastic fieldset:after { content: " "; display: block; height: 0; clear: both; visibility: hidden; }
-.formtastic abbr, .formtastic acronym { border: 0; font-variant: normal; font-weight: normal; }
-.formtastic ol, .formtastic ul { list-style: none; }
-.formtastic label { display: block; *display: inline-block; }
-.formtastic label:after { content: " "; display: block; height: 0; clear: both; visibility: hidden; }
-.formtastic input, .formtastic textarea { vertical-align: middle; }
-.formtastic .check_boxes input, .formtastic .radio input { margin: 0; }
-.formtastic .check_boxes label, .formtastic .radio label { cursor: pointer; }
-.formtastic .hidden { display: none; }
-.formtastic .date li, .formtastic .time li, .formtastic .datetime li { float: left; width: auto; clear: none; }
-.formtastic .date label, .formtastic .time label, .formtastic .datetime label { display: none; width: auto; }
-.formtastic .date input, .formtastic .time input, .formtastic .datetime input { display: inline; margin: 0; padding: 0; }
-.formtastic .errors { list-style: square; }
-.formtastic .errors li { padding: 0; border: none; display: list-item; float: none; clear: both; }
-.formtastic .inputs { z-index: 99; }
-.formtastic .buttons li { float: left; }
-.formtastic li { *display: inline-block; display: block; }
-.formtastic li:after { content: " "; display: block; height: 0; clear: both; visibility: hidden; }
-.formtastic li fieldset { border: none; position: relative; margin-top: 0px; }
-.formtastic li legend { display: block; margin-bottom: 0; }
-.formtastic li .label { display: block; clear: both; background: transparent; }
-.formtastic li ol { float: left; margin: 0; }
-.formtastic li ol li { padding: 0; border: 0; display: inline; }
-.formtastic fieldset { width: 100%; }
-.formtastic label { float: left; width: 20%; text-align: left; padding-left: 0; }
-.formtastic li ol { padding: 0 10% 0 20%; }
-.formtastic li fieldset legend, .formtastic li fieldset legend .label { display: block; }
-.formtastic li fieldset legend { width: 20%; text-align: left; display: inline; float: left; clear: none; padding: 0; width: 100%; }
-.formtastic li fieldset .label { position: absolute; width: 20%; top: 0px; left: 0; }
-.formtastic li fieldset label { padding-left: 0; }
-.formtastic li fieldset label, .formtastic li fieldset input { width: auto; display: inline; clear: none; text-align: left; }
-.formtastic li fieldset select { padding: 0; clear: both; display: block; }
-.formtastic .inline-hints, .formtastic .inline-errors, .formtastic .errors { margin: 0 0 0 20%; }
-.formtastic input, .formtastic textarea { width: 70%; }
-.formtastic select { width: auto; }
-.formtastic .checkbox li, .formtastic .radio li { display: block; clear: both; }
-.formtastic .checkbox input, .formtastic .radio input { border: none; }
-.formtastic .buttons { padding-left: 20%; width: 80%; }
-.formtastic .buttons input { width: auto; }
-.formtastic .buttons li { width: auto; float: left; display: inline; }
-.formtastic #errorExplanation { margin-left: 20%; width: 70%; }
+/* line 4, ../../../app/stylesheets/print.scss */
+body.bp {
+  line-height: 1.5;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: black;
+  background: none;
+  font-size: 10pt;
+}
+/* line 52, ../../../../../.rvm/gems/ruby-1.8.7-p334@proman3/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp .container {
+  background: none;
+}
+/* line 54, ../../../../../.rvm/gems/ruby-1.8.7-p334@proman3/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp hr {
+  background: #cccccc;
+  color: #cccccc;
+  width: 100%;
+  height: 2px;
+  margin: 2em 0;
+  padding: 0;
+  border: none;
+}
+/* line 62, ../../../../../.rvm/gems/ruby-1.8.7-p334@proman3/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp hr.space {
+  background: white;
+  color: white;
+}
+/* line 65, ../../../../../.rvm/gems/ruby-1.8.7-p334@proman3/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp h1, body.bp h2, body.bp h3, body.bp h4, body.bp h5, body.bp h6 {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+/* line 67, ../../../../../.rvm/gems/ruby-1.8.7-p334@proman3/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp code {
+  font-size: 0.9em;
+  font-family: "andale mono", "lucida console", monospace;
+}
+/* line 72, ../../../../../.rvm/gems/ruby-1.8.7-p334@proman3/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp a img {
+  border: none;
+}
+/* line 75, ../../../../../.rvm/gems/ruby-1.8.7-p334@proman3/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp a:link, body.bp a:visited {
+  background: transparent;
+  font-weight: 700;
+  text-decoration: underline;
+}
+/* line 79, ../../../../../.rvm/gems/ruby-1.8.7-p334@proman3/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp p img.top {
+  margin-top: 0;
+}
+/* line 81, ../../../../../.rvm/gems/ruby-1.8.7-p334@proman3/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp blockquote {
+  margin: 1.5em;
+  padding: 1em;
+  font-style: italic;
+  font-size: 0.9em;
+}
+/* line 86, ../../../../../.rvm/gems/ruby-1.8.7-p334@proman3/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp .small {
+  font-size: 0.9em;
+}
+/* line 88, ../../../../../.rvm/gems/ruby-1.8.7-p334@proman3/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp .large {
+  font-size: 1.1em;
+}
+/* line 90, ../../../../../.rvm/gems/ruby-1.8.7-p334@proman3/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp .quiet {
+  color: #999999;
+}
+/* line 92, ../../../../../.rvm/gems/ruby-1.8.7-p334@proman3/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp .hide {
+  display: none;
+}

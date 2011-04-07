@@ -1,18 +1,20 @@
 # Be sure to restart your server when you modify this file
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.11' unless defined? RAILS_GEM_VERSION
+# Fix for uninitialized constant ActiveSupport::Dependencies::Mutex error
+require 'thread'
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
-Rails::Initializer.run do |config|
-  config.gem 'compass', :version => '>= 0.8.17'
+Rails::Initializer.run do |config|  
+  config.gem 'compass', :version => '>= 0.10.6'
   config.gem 'haml', :version => '>=2.2.16'
   config.active_record.observers = :user_observer
   config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
   config.gem 'authlogic', :version => '= 2.0.11'
-  config.gem 'justinfrench-formtastic', :lib => 'formtastic', :source => 'http://gems.github.com'
+  config.gem 'formtastic'
   config.gem 'rdiscount'
   config.gem 'compass', :version => '>= 0.8.17'
   config.gem 'haml'
